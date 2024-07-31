@@ -16,7 +16,27 @@ export const columnDef = [
     header: "Email",
   },
   {
+    accessorKey: "gender",
+    header: "Gender",
+  },
+  {
+    accessorKey: "ip_address",
+    header: "IP Address",
+  },
+  {
+    accessorKey: "phone",
+    header: "Phone",
+  },
+  {
     accessorKey: "date",
     header: "Date",
+  },
+];
+
+// Cell merge example
+const columnDefWithCellMerge = [
+  {
+    accessorFn: (row) => `${row.first_name} ${row.last_name}`,
+    name: "Name",
   },
 ];
